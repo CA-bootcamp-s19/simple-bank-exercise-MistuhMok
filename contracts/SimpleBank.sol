@@ -59,7 +59,7 @@ contract SimpleBank {
     // A SPECIAL KEYWORD prevents function from editing state variables;
     // allows function to run locally/off blockchain
     function getBalance() public view returns (uint) {
-        /* Get the balance of the sender of this transaction */\
+        /* Get the balance of the sender of this transaction */
         return balances[msg.sender];
     }
 
@@ -98,7 +98,7 @@ contract SimpleBank {
         if(balances[msg.sender] >= withdrawAmount){
             balances[msg.sender] -= withdrawAmount;
             msg.sender.transfer(withdrawAmount);
-            return balances[msg.sender]
+            return balances[msg.sender];
         }
     }
 
